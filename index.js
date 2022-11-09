@@ -3,12 +3,12 @@ const mineflayer = require('mineflayer')
 const bot = mineflayer.createBot({
  host:'ir.skyblock.uz',
  port: 25566,
- username: 'botFazliddinov_4'
+ username: 'XxxTentacion'
 })
 bot.on('messagestr', (message) => {
   if(message.includes("/register"))
   {
-    bot.chat("/reg jobir2009 jobir2009")
+    bot.chat("/reg fazliddinov fazliddinov")
   }
   
 
@@ -19,7 +19,7 @@ bot.on('messagestr', (message) => {
 bot.on('messagestr', (message) => {
   if(message.includes("/log"))
   {
-    bot.chat("/login jobir2009")
+    bot.chat("/login fazliddinov")
   }
   
 
