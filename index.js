@@ -1,34 +1,32 @@
- let ar = process.argv
- const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer')
 
 const bot = mineflayer.createBot({
-    host: 'ir.skyblock.uz',
-    port: 25566,
-    username: 'botFazliddinov_5'
-    version: "1.18.2"
+ host:'ir.skyblock.uz',
+ port: 25566,
+ username: 'botFazliddinov_5'
 })
-
-let password = "jobir2009"
- 
- bot.on('chat', function(username, message) {
-      if(username=='FamousTrain1733' && message.startsWith(ar[3]))
-    {
-        bot.chat(message.substring(1))
-    }
-})
-
 bot.on('messagestr', (message) => {
-    console.log(message)
-     
-    if (message.includes("/register")) {
-        bot.chat(`/register ${password} ${password}`)
-    }
-    
-    if (message.includes("/login")) {
-        bot.chat(`/login ${password}`)
-    }
-})
+  if(message.includes("/register"))
+  {
+    bot.chat("/reg jobir2009 jobir2009")
+  }
+  
 
+}
+
+
+)
+bot.on('messagestr', (message) => {
+  if(message.includes("/log"))
+  {
+    bot.chat("/login jobir2009")
+  }
+  
+
+}
+
+
+)
 async function dig() {
   if (!bot.heldItem || !bot.heldItem.name.includes('pickaxe')) {
     var pickaxe = bot.inventory.items().filter(i => i.name.includes('pickaxe'))[0];
