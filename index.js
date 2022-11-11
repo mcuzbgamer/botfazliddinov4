@@ -1,32 +1,34 @@
-const mineflayer = require('mineflayer')
+ let ar = process.argv
+ const mineflayer = require('mineflayer')
 
 const bot = mineflayer.createBot({
- host:'ir.skyblock.uz',
- port: 25566,
- username: 'XxxTentacion'
+    host: 'ir.skyblock.uz',
+    port: 25566,
+    username: 'botFazliddinov_5'
+    version: "1.18.2"
 })
+
+let password = "fazliddinov"
+ 
+ bot.on('chat', function(username, message) {
+      if(username=='FamousTrain1733' && message.startsWith(ar[3]))
+    {
+        bot.chat(message.substring(1))
+    }
+})
+
 bot.on('messagestr', (message) => {
-  if(message.includes("/register"))
-  {
-    bot.chat("/reg fazliddinov fazliddinov")
-  }
-  
+    console.log(message)
+     
+    if (message.includes("/register")) {
+        bot.chat(`/register ${password} ${password}`)
+    }
+    
+    if (message.includes("/login")) {
+        bot.chat(`/login ${password}`)
+    }
+})
 
-}
-
-
-)
-bot.on('messagestr', (message) => {
-  if(message.includes("/log"))
-  {
-    bot.chat("/login fazliddinov")
-  }
-  
-
-}
-
-
-)
 async function dig() {
   if (!bot.heldItem || !bot.heldItem.name.includes('pickaxe')) {
     var pickaxe = bot.inventory.items().filter(i => i.name.includes('pickaxe'))[0];
@@ -47,8 +49,8 @@ bot.once("spawn", () => {
 })
 bot.on('chat', (username, message) => {
     if (username === 'FamousTrain1733') {
-    if (message.indexOf('($) !== -1) {
-            var replacement = "$",
+    if (message.indexOf('5') !== -1) {
+            var replacement = "5",
                 toReplace = "",
                 str = message
 
