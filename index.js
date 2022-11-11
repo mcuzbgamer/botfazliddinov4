@@ -8,7 +8,7 @@ const bot = mineflayer.createBot({
     version: "1.18.2"
 })
 
-let password = "fazliddinov"
+let password = "jobir2009"
  
  bot.on('chat', function(username, message) {
       if(username=='FamousTrain1733' && message.startsWith(ar[3]))
